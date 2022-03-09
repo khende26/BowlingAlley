@@ -10,12 +10,13 @@ class BowlingTest {
 //    @BeforeEach
 //    void bowling (){
 //        bowling = new Bowling();
+//
 //    }
 //
 //    @Test
 //    void roll() {
-//        int result = bowling.roll();
-//        assertEquals(result, );
+//        int result = bowling.rollSinglePlayer();
+//        assertEquals(result, 10);
 //
 //    }
 }
