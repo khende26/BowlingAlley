@@ -38,7 +38,7 @@ public class BowlingGame {
                 break;
             } else {
                 System.out.println("Invalid entry. Please try again.");
-//                scanner.nextInt();
+                userInput = scanner.nextInt();
             }
         } while(setPlayers);
 
