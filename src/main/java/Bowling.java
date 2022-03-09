@@ -6,8 +6,9 @@ public class Bowling {
     private int pins;
     private int turn;
     int totalOfPins = 10;
+    int totalScore = 0;
     List<Integer> countOfPins = new ArrayList<>();
-
+//    List<Integer> totalScore = new ArrayList<>();
 
     public int getPins() {
         return pins;
@@ -45,13 +46,23 @@ public class Bowling {
 
 
     public void roll() {
-        int roll1 = countOfPins.get(rand.nextInt(countOfPins.size()));
-        System.out.println("You knocked over " + roll1 + " pins");
-        int leftOverPins = totalOfPins - roll1;
-        int roll2 = countOfPins.get(rand.nextInt(leftOverPins));
-        System.out.println("You knocked over " + roll2 + " pins");
-        int framescore = roll1 + roll2;
+        for (int i = 0; i < 10; i++) {
+            int roll1 = countOfPins.get(rand.nextInt(countOfPins.size()));
+            System.out.println("On roll 1 you knocked over " + roll1 + " pins");
+            int leftOverPins = totalOfPins - roll1;
+            int roll2 = countOfPins.get(rand.nextInt(leftOverPins));
+            System.out.println("On roll 2, you knocked over " + roll2 + " pins");
+            int framescore = roll1 + roll2;
+            System.out.println("Your total Frame Score is " + framescore);
+            totalScore += framescore;
+        }
     }
+
+    public int getTotalScore() {
+        System.out.println("Your total score is " + totalScore);
+        return totalScore;
+    }
+
 }
 
 
